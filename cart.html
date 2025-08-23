@@ -154,7 +154,7 @@
     <img src="brand logo.png" alt="Mahaveer Ayurveda Logo">
     <nav>
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
+      <a href="Products.html">Products</a>
       <span class="cart-icon">🛒 <span id="cartCount">0</span></span>
     </nav>
   </header>
@@ -175,7 +175,7 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="Products.html">Products</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -191,30 +191,10 @@
     </div>
   </footer>
 
-  <h2>Your Cart</h2>
-<div id="cart-items"></div>
+  
 
 <script>
-  function loadCart() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let container = document.getElementById("cart-items");
-
-    if (cart.length === 0) {
-      container.innerHTML = "<p>Your cart is empty.</p>";
-      return;
-    }
-
-    container.innerHTML = "";
-    cart.forEach((item, index) => {
-      container.innerHTML += `
-        <div class="cart-item" style="margin:10px; padding:10px; border:1px solid #ccc;">
-          <img src="${item.image}" width="80">
-          <p><b>${item.name}</b> - $${item.price}</p>
-          <button onclick="removeItem(${index})">Remove</button>
-        </div>
-      `;
-    });
-  }
+  
 
   function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
