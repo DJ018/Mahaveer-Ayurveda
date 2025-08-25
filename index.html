@@ -26,6 +26,65 @@ here is code  <!DOCTYPE html>
     }
   </script>
   <style>
+/* ===========================
+   Mobile Responsive CSS
+   =========================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  /* Products grid */
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    gap: 12px;
+  }
+
+  /* Cart */
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cart-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Products grid */
+  .products-container {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+
+  /* Buttons full width */
+  button, .btn, .add-to-cart {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  /* Logo & header */
+  header img {
+    max-width: 120px;
+  }
+}
 
   
     header {
@@ -517,3 +576,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 
 </html>   
+
